@@ -53,32 +53,34 @@ class LoginComponent extends Component{
     render(){
         return(
             <div>
-                <Invalidcredcheck invalidcred={this.state.invalidcred} />
+                {/*<Invalidcredcheck invalidcred={this.state.invalidcred} />*/}
+                {this.state.invalidcred && <div>Invalid creds</div>}
+                {this.state.loginsuccess && <div>login success</div>}
             User Name:<input type='text' name="username" value={this.state.username} onChange={this.handleChange}/>
             Password:<input type='password' name="password" value={this.state.password} onChange={this.handleChange}/>
             <button onClick={this.loginclicked}>login</button>
-            <Loginsuccessmsg loginsuccess={this.state.loginsuccess} />
+            {/*<Loginsuccessmsg loginsuccess={this.state.loginsuccess} />*/}
             
             </div>
         );
     }
 }
 
-function Invalidcredcheck(props)
-{
-    if(props.invalidcred){
-        return <div>Invalid creds</div>
-    }
-    else
-     return null
-}
+// function Invalidcredcheck(props)
+// {
+//     if(props.invalidcred){
+//         return <div>Invalid creds</div>
+//     }
+//     else
+//      return null
+// }
 
-function Loginsuccessmsg(props)
-{
-    if(props.loginsuccess){
-        return <div>login success</div>
-    }
-    else
-     return null
-}
+// function Loginsuccessmsg(props)
+// {
+//     if(props.loginsuccess){
+//         return <div>login success</div>
+//     }
+//     else
+//      return null
+// }
 export default TodoApp
