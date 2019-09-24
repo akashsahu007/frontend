@@ -19,6 +19,27 @@
   color: white;
 }
 
+  body {
+    padding-top: 10em;
+    font-size: calc(10px + 2vmin);
+    font-family: monospace;
+    color: green;
+    background-color: rgb(3, 10, 29);
+    background-image: -webkit-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+	background-image: -moz-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+	background-image: -o-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+	background-image: -ms-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+	background-image: linear-gradient(bottom, #323B55 0%, #424F71 100%);
+	
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+
+
 .App-link {
   color: #61dafb;
 }

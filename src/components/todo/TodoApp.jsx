@@ -1,11 +1,24 @@
 import React,{Component} from 'react';
+import {BrowserRouter as Router , Route , Switch} from 'react-router-dom'
 
 class TodoApp extends Component {
     render()
     {
         return(
             <div className="TodoApp">
-                <LoginComponent/>
+                
+                <Router>
+                <> 
+                    <Switch>
+
+                            <Route path="/login" component={LoginComponent}/>
+                            <Route path="/" exact component={LoginComponent}/>
+                            <Route path="/welcome/:name" component={Welcome}/>
+                            <Route component={error}/>
+                    </Switch>
+                </>
+
+                </Router>
                
             </div>
         
@@ -38,6 +51,7 @@ class LoginComponent extends Component{
         {
             this.setState({loginsuccess: true})
             this.setState({invalidcred: false})
+            this.props.history.push(`/welcome/${this.state.username}`)
         }
         else
         {
@@ -83,4 +97,21 @@ class LoginComponent extends Component{
 //     else
 //      return null
 // }
+
+class Welcome extends Component{
+
+    render(){
+        return(
+            <div>welcome {this.props.match.params.name} </div>
+        );
+    }
+}
+
+function error()
+{
+    return(
+        <div>page not found , fuck off!!</div>
+    );
+    
+}
 export default TodoApp
