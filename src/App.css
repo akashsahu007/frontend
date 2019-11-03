@@ -8,37 +8,23 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pink-text {
+  color: pink;
+}
+.blue-text {
+  color: blue;
 }
 
-  body {
-    padding-top: 10em;
-    font-size: calc(10px + 2vmin);
-    font-family: monospace;
-    color: green;
-    background-color: rgb(3, 10, 29);
-    background-image: -webkit-linear-gradient(bottom, #323B55 0%, #424F71 100%);
-	background-image: -moz-linear-gradient(bottom, #323B55 0%, #424F71 100%);
-	background-image: -o-linear-gradient(bottom, #323B55 0%, #424F71 100%);
-	background-image: -ms-linear-gradient(bottom, #323B55 0%, #424F71 100%);
-	background-image: linear-gradient(bottom, #323B55 0%, #424F71 100%);
-	
-  }
-  .pink-text {
-    color: pink;
-  }
-  .blue-text {
-    color: blue;
-  }
-
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #222222;
+  color: white;
+  text-align: center;
+}
 
 .App-link {
   color: #61dafb;
